@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>One Little Question 💗</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- Background decorations -->
+
+    <div class="decor heart-one">♡</div>
+
+    <div class="decor heart-two">♡</div>
+
+    <div class="decor heart-three">♡</div>
+
+    <div class="decor heart-four">♡</div>
+
+
+    <main class="app">
+
+
+        <!-- ==========================
+             QUESTION
+        =========================== -->
+
+        <section
+            id="questionScreen"
+            class="screen active"
+        >
+
+            <div class="card">
+
+                <div class="emoji">
+                    💌
+                </div>
+
+
+                <h1>
+                    Will you go on a date with me?
+                </h1>
+
+
+                <p>
+                    I have a very important question
+                    for you...
+                </p>
+
+
+                <div class="buttons-area">
+
+                    <button
+                        id="yesButton"
+                        class="yes-button"
+                    >
+                        YES 💗
+                    </button>
+
+
+                    <button
+                        id="noButton"
+                        class="no-button"
+                    >
+                        NO 😭
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             YES SCREEN
+        =========================== -->
+
+        <section
+            id="reactionScreen"
+            class="screen"
+        >
+
+            <div class="card">
+
+                <div class="emoji">
+                    🥹
+                </div>
+
+
+                <h2>
+                    WAIT...
+                </h2>
+
+
+                <p>
+                    You actually said YES?!
+                </p>
+
+
+                <p class="small-text">
+                    I wasn't emotionally prepared
+                    for that.
+                </p>
+
+
+                <button
+                    id="planningButton"
+                    class="main-button"
+                >
+                    Let's plan it 💗
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             DATE SCREEN
+        =========================== -->
+
+        <section
+            id="dateScreen"
+            class="screen"
+        >
+
+            <div class="card">
+
+                <div class="emoji">
+                    📅
+                </div>
+
+
+                <h2>
+                    When are you free?
+                </h2>
+
+
+                <p>
+                    Pick a date and time.
+                </p>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="dateInput"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="timeInput"
+                    >
+
+                </div>
+
+
+                <button
+                    id="dateContinue"
+                    class="main-button"
+                >
+                    Continue 💕
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             FOOD SCREEN
+        =========================== -->
+
+        <section
+            id="foodScreen"
+            class="screen"
+        >
+
+            <div class="card">
+
+                <div class="emoji">
+                    🍴
+                </div>
+
+
+                <h2>
+                    What are we eating?
+                </h2>
+
+
+                <p>
+                    Pick your choice.
+                </p>
+
+
+                <div class="food-grid">
+
+
+                    <button
+                        class="food"
+                        data-food="Pizza 🍕"
+                    >
+
+                        <span>
+                            🍕
+                        </span>
+
+                        Pizza
+
+                    </button>
+
+
+                    <button
+                        class="food"
+                        data-food="Sushi 🍣"
+                    >
+
+                        <span>
+                            🍣
+                        </span>
+
+                        Sushi
+
+                    </button>
+
+
+                    <button
+                        class="food"
+                        data-food="Burger 🍔"
+                    >
+
+                        <span>
+                            🍔
+                        </span>
+
+                        Burger
+
+                    </button>
+
+
+                    <button
+                        class="food"
+                        data-food="Pasta 🍝"
+                    >
+
+                        <span>
+                            🍝
+                        </span>
+
+                        Pasta
+
+                    </button>
+
+
+                    <button
+                        class="food"
+                        data-food="Tacos 🌮"
+                    >
+
+                        <span>
+                            🌮
+                        </span>
+
+                        Tacos
+
+                    </button>
+
+
+                    <button
+                        class="food"
+                        data-food="Ramen 🍜"
+                    >
+
+                        <span>
+                            🍜
+                        </span>
+
+                        Ramen
+
+                    </button>
+
+
+                </div>
+
+
+                <button
+                    id="finishButton"
+                    class="main-button"
+                >
+                    Continue ❤️
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             FINAL SCREEN
+        =========================== -->
+
+        <section
+            id="finalScreen"
+            class="screen"
+        >
+
+            <div class="card">
+
+                <div class="big-heart">
+                    ❤️
+                </div>
+
+
+                <h1>
+                    It's a date!
+                </h1>
+
+
+                <p>
+                    I can't wait to see you.
+                </p>
+
+
+                <div class="summary">
+
+                    <div>
+                        📅
+                        <strong>Date:</strong>
+
+                        <span id="finalDate">
+                        </span>
+                    </div>
+
+
+                    <div>
+                        🕐
+                        <strong>Time:</strong>
+
+                        <span id="finalTime">
+                        </span>
+                    </div>
+
+
+                    <div>
+                        🍴
+                        <strong>Food:</strong>
+
+                        <span id="finalFood">
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <p class="final-message">
+                    Don't forget...
+                    you said YES. 😌❤️
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

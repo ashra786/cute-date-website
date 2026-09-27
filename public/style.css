@@ -1,0 +1,588 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #ffdbe7,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            #ffe5d2,
+            transparent 30%
+        ),
+
+        #fff5f7;
+
+    color: #4c343c;
+
+    overflow: hidden;
+}
+
+
+/* ==========================
+   DECORATIONS
+========================== */
+
+.decor {
+
+    position: fixed;
+
+    font-size: 35px;
+
+    color: #f59ab5;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+
+}
+
+
+.heart-one {
+
+    top: 10%;
+
+    left: 12%;
+
+}
+
+
+.heart-two {
+
+    top: 18%;
+
+    right: 12%;
+
+}
+
+
+.heart-three {
+
+    bottom: 12%;
+
+    left: 15%;
+
+}
+
+
+.heart-four {
+
+    bottom: 18%;
+
+    right: 14%;
+
+}
+
+
+/* ==========================
+   APP
+========================== */
+
+.app {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 20px;
+
+}
+
+
+/* ==========================
+   SCREENS
+========================== */
+
+.screen {
+
+    display: none;
+
+}
+
+
+.screen.active {
+
+    display: block;
+
+    animation:
+        screenIn
+        0.45s
+        ease;
+
+}
+
+
+@keyframes screenIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================
+   CARD
+========================== */
+
+.card {
+
+    position: relative;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    border:
+        2px solid
+        rgba(255, 150, 180, 0.25);
+
+    border-radius: 30px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(120, 50, 70, 0.12);
+
+}
+
+
+.emoji {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.big-heart {
+
+    font-size: 85px;
+
+    margin-bottom: 20px;
+
+}
+
+
+h1 {
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+}
+
+
+h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+}
+
+
+p {
+
+    color: #765762;
+
+    line-height: 1.6;
+
+    font-size: 17px;
+
+}
+
+
+.small-text {
+
+    margin-top: 10px;
+
+}
+
+
+/* ==========================
+   QUESTION BUTTONS
+========================== */
+
+.buttons-area {
+
+    position: relative;
+
+    height: 170px;
+
+    margin-top: 30px;
+
+}
+
+
+button {
+
+    border: none;
+
+    font-family: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.yes-button {
+
+    position: absolute;
+
+    left: 32%;
+
+    top: 35%;
+
+    transform:
+        translate(-50%, -50%);
+
+    padding:
+        15px 30px;
+
+    border-radius: 50px;
+
+    background: #ff6f9c;
+
+    color: white;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(255, 111, 156, 0.3);
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.yes-button:hover {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.05);
+
+}
+
+
+.no-button {
+    position: fixed;
+
+    left: 68%;
+    top: 50%;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    background: #eee5e8;
+    color: #745963;
+
+    font-size: 17px;
+
+    z-index: 9999;
+
+    transition:
+        left 0.22s ease,
+        top 0.22s ease;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================
+   MAIN BUTTON
+========================== */
+
+.main-button {
+
+    margin-top: 28px;
+
+    padding:
+        15px 30px;
+
+    border-radius: 50px;
+
+    background: #ff6f9c;
+
+    color: white;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(255, 111, 156, 0.25);
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.main-button:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ==========================
+   FORM
+========================== */
+
+.form-group {
+
+    margin-top: 25px;
+
+    text-align: left;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+input {
+
+    width: 100%;
+
+    padding:
+        14px 16px;
+
+    border:
+        2px solid
+        #f0d9df;
+
+    border-radius: 15px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    background: #fffafa;
+
+    outline: none;
+
+}
+
+
+input:focus {
+
+    border-color:
+        #ff8ead;
+
+}
+
+
+/* ==========================
+   FOOD
+========================== */
+
+.food-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin-top: 25px;
+
+}
+
+
+.food {
+
+    padding:
+        20px 10px;
+
+    border-radius: 20px;
+
+    background: #fffafa;
+
+    border:
+        2px solid
+        #f4e0e5;
+
+    font-size: 16px;
+
+    color: #5b4149;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.food span {
+
+    display: block;
+
+    font-size: 40px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.food:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.food.selected {
+
+    border-color:
+        #ff6f9c;
+
+    background:
+        #fff0f4;
+
+    transform:
+        scale(1.03);
+
+}
+
+
+/* ==========================
+   SUMMARY
+========================== */
+
+.summary {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background:
+        #fff3f6;
+
+    text-align: left;
+
+}
+
+
+.summary div {
+
+    margin: 10px 0;
+
+    color: #765762;
+
+}
+
+
+.final-message {
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 500px) {
+
+    .app {
+
+        padding: 15px;
+
+    }
+
+
+    .card {
+
+        padding:
+            35px 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .emoji {
+
+        font-size: 60px;
+
+    }
+
+}
